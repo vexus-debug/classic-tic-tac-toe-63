@@ -5949,7 +5949,9 @@ export type Database = {
           description: string
           estimated_cost: number
           id: string
+          insurance_amount: number
           notes: string | null
+          phase: number | null
           plan_id: string
           scheduled_date: string | null
           status: string
@@ -5964,7 +5966,9 @@ export type Database = {
           description: string
           estimated_cost?: number
           id?: string
+          insurance_amount?: number
           notes?: string | null
+          phase?: number | null
           plan_id: string
           scheduled_date?: string | null
           status?: string
@@ -5979,7 +5983,9 @@ export type Database = {
           description?: string
           estimated_cost?: number
           id?: string
+          insurance_amount?: number
           notes?: string | null
+          phase?: number | null
           plan_id?: string
           scheduled_date?: string | null
           status?: string
@@ -6007,10 +6013,15 @@ export type Database = {
       }
       treatment_plans: {
         Row: {
+          acceptance_status: string
+          coverage_percent: number
           created_at: string
           created_by: string | null
           description: string | null
           id: string
+          insurer_name: string | null
+          option_group: string | null
+          option_label: string | null
           org_id: string
           patient_id: string
           plan_name: string
@@ -6022,10 +6033,15 @@ export type Database = {
           updated_at: string
         }
         Insert: {
+          acceptance_status?: string
+          coverage_percent?: number
           created_at?: string
           created_by?: string | null
           description?: string | null
           id?: string
+          insurer_name?: string | null
+          option_group?: string | null
+          option_label?: string | null
           org_id: string
           patient_id: string
           plan_name: string
@@ -6037,10 +6053,15 @@ export type Database = {
           updated_at?: string
         }
         Update: {
+          acceptance_status?: string
+          coverage_percent?: number
           created_at?: string
           created_by?: string | null
           description?: string | null
           id?: string
+          insurer_name?: string | null
+          option_group?: string | null
+          option_label?: string | null
           org_id?: string
           patient_id?: string
           plan_name?: string
