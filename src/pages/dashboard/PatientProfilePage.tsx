@@ -36,6 +36,7 @@ import { PatientLabCasesSection, usePatientLabCases, isLabCaseActive } from "@/c
 import { toast } from "@/hooks/use-toast";
 import { OfflineDentalHistorySection } from "@/components/dashboard/OfflineDentalHistorySection";
 import { PatientOdontogram } from "@/components/dashboard/PatientOdontogram";
+import { PerioChart } from "@/components/dashboard/PerioChart";
 import { PHASES, procedurePhase } from "@/lib/dentalPhases";
 import { useUpdatePlanItemStatus } from "@/hooks/useTreatmentPlans";
 import { openPatientDocument } from "@/lib/documentUtils";
@@ -413,6 +414,7 @@ export default function PatientProfilePage() {
         {/* Dental History */}
         <TabsContent value="history" className="mt-4 space-y-4">
           {terms.showDentalChart && patientId && <PatientOdontogram patientId={patientId} canEdit={canEditClinical} />}
+          {terms.showDentalChart && patientId && <PerioChart patientId={patientId} canEdit={canEditClinical} />}
           {/* Dental Chart Summary */}
           {terms.showDentalChart && dentalEntries.length > 0 && (
             <Card>

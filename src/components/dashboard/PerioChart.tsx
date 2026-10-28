@@ -19,7 +19,7 @@ const db = supabase as any;
 
 export function PerioChart({ patientId, canEdit }: { patientId: string; canEdit: boolean }) {
   const { currentOrg } = useOrg();
-  const orgId = currentOrg?.org_id ?? (currentOrg as any)?.id;
+  const orgId = currentOrg?.org_id;
   const qc = useQueryClient();
   const key = ["perio_charts", patientId];
   const { data: charts = [] } = useQuery({
