@@ -13,6 +13,19 @@ export interface UpdateEntry {
 
 export const updates: UpdateEntry[] = [
   {
+    version: "v2.11.0",
+    date: "October 28, 2026",
+    title: "Full gum chart with 6-point probing",
+    kind: "feature",
+    items: [
+      { kind: "feature", text: "Record pocket depths at six spots per tooth; the cursor jumps ahead as you type." },
+      { kind: "feature", text: "Tap to mark bleeding or pus per spot; the bleeding score shows at the top." },
+      { kind: "feature", text: "Enter gum recession and attachment loss is worked out for you." },
+      { kind: "feature", text: "Grade tooth mobility and furcation on back teeth." },
+      { kind: "feature", text: "Compare pocket depths against a previous visit on a wave line." },
+    ],
+  },
+  {
     version: "v2.10.0",
     date: "October 28, 2026",
     title: "A tooth chart that looks like the mouth",
