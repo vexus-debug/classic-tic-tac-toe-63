@@ -3724,6 +3724,60 @@ export type Database = {
           },
         ]
       }
+      perio_charts: {
+        Row: {
+          bop_percent: number | null
+          created_at: string
+          created_by: string | null
+          exam_date: string
+          id: string
+          notes: string | null
+          org_id: string
+          patient_id: string
+          teeth: Json
+          updated_at: string
+        }
+        Insert: {
+          bop_percent?: number | null
+          created_at?: string
+          created_by?: string | null
+          exam_date?: string
+          id?: string
+          notes?: string | null
+          org_id: string
+          patient_id: string
+          teeth?: Json
+          updated_at?: string
+        }
+        Update: {
+          bop_percent?: number | null
+          created_at?: string
+          created_by?: string | null
+          exam_date?: string
+          id?: string
+          notes?: string | null
+          org_id?: string
+          patient_id?: string
+          teeth?: Json
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "perio_charts_org_id_fkey"
+            columns: ["org_id"]
+            isOneToOne: false
+            referencedRelation: "organizations"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "perio_charts_patient_id_fkey"
+            columns: ["patient_id"]
+            isOneToOne: false
+            referencedRelation: "patients"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       pharmacy_dispense_items: {
         Row: {
           created_at: string
